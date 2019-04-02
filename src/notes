@@ -1,0 +1,26 @@
+--PROPS-- 
+props are properties we can pass them into components like attributes
+the way that we can access props in a functional component is a bit different froma class component
+when its a class component we access props by using this.props
+when its a functional we access props by props.
+
+--default props--
+    example is the header, you dont always have something to show up so you want something in by default
+--Prop Types-- impt tab for importing
+validate data coming in
+in header we imported proptypes then made a header.proptypes at bottom
+
+--styling and Css--
+-inline styling
+    - <h1 style={{ color: "red", fontSize: "50px" }}>{branding}</h1>
+-variable styling
+    const headingStyle = {
+  color: "red",
+  fontSize: "50px"
+};
+after declaring it you pass it in to element with style={}
+-specific style sheet for each component
+    you can create a file with filename.Css
+    then use regular css 
+
+
