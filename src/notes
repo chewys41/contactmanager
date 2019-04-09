@@ -23,4 +23,38 @@ after declaring it you pass it in to element with style={}
     you can create a file with filename.Css
     then use regular css 
 
+    React.Fragment tags take out unnecessary elements that you dont need. we took out a <div> inside Contacts.js 
+    in Contact.js where we have a div with a card  you cant use it
 
+
+--STATE--
+ ways to add STATE
+ in a constructor which is a method that runs when the object or component is mounted
+
+ Fontawesome.com 
+
+ --events--
+    use the THIS keyword because its going to refer to a method in the same class
+    lifecycle methods included with the component class like render,componentDidMount, and more. in these core methods we can use this without doing any extra work.
+    when you use custom methods instead of lifecycle you can do a couple things 
+            - bind it directly in the render where your calling it ex. onClick= {this.onShowClick.bind(this)}
+            - you can put in the constructor like this.onShowClick = this.onShowClick.bind(this) -- then use this.onShowClick in the render
+            - another way is to turn the onShow click into an arrow function and you dont have to bind anything.
+                        example: onShowClick = () => {                      instead of onShowClick() {
+                                     console.log(this.state);                   }             
+                                     };
+
+-every event can get passed in an event object     onShowClick = (e) => {
+                                                    console.log(e.target);
+                                                        };
+
+
+how to pass in a parameter if--
+    if we have an event and we want onShowClick to pass something in and usually it would be an id or something you would use .bind
+        example: onClick = {this.onShowClick.bind(this, 1)}
+        you would also have to go to the onShowClick function and pass in the parameter in the () after the event thats in it
+
+--STATE--
+you cant change state directly with this.state. you need this.setState
+
+manipulating the state of a component from another component
