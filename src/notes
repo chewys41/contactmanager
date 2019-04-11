@@ -58,3 +58,32 @@ how to pass in a parameter if--
 you cant change state directly with this.state. you need this.setState
 
 manipulating the state of a component from another component
+
+React Router
+    npm install react-router-dom
+        {BrowserRouter} basically the parent component that stores all of your route components
+        {Route} which holds all routes
+        {Switch} allows us to have a default or not found page sort of thing
+
+        -----lifecycle mthods----
+        https://medium.com/@nancydo7/understanding-react-16-4-component-lifecycle-methods-e376710e5157
+
+            
+        lifecucle methods are only availible in class based components
+
+        -render is a lifecycle method
+        -componentDidMount fires whatever you put in that function is going to fire off after the component mounts
+                -this is usually hwere you make your http calls to an API or to a back end . 
+                if your fetching data from within component and puitting it into the component state or whatever 
+                this is where you would cal the initial request
+        -componentWillMount
+                -this runs before it mounts. so componentDidMount runs first then componentWillMount
+        -componentDidUpdate
+                -this is only going to run when the component updates. when component updates and rerenders this will run
+        -componentWillUpdate
+        -componentWillRecieveProps
+            -this takes in nextProps and nextState
+            -when your component receives new properties then this will run.. usually used with redux
+        -static getDerivedStateFromProps(nextProps, prevState) {
+      
+  }
